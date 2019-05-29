@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package.json .
 RUN npm install
 COPY . .
-ARG CI=true
+ENV CI=true
 
 CMD [ "npm", "run", "start" ]
 
